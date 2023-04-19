@@ -43,9 +43,9 @@ const SignupForm = () => {
     }
 
     setUserFormData({
-      username: '',
-      email: '',
-      password: '',
+      username: 'tester',
+      email: 'test123@gmail.com',
+      password: 'pleasework',
     });
   };
 
