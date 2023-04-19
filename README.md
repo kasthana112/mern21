@@ -1,1 +1,4 @@
-# Book Search Engine Starter Code
+MERN BOOK REPO
+
+By Kanika Asthana
+Worked with BCS Tutors
