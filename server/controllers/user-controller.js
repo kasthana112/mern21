@@ -72,3 +72,5 @@ module.exports = {
     return res.json(updatedUser);
   },
 };
+
+module.exports = 
