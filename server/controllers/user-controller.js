@@ -22,7 +22,7 @@ module.exports = {
       const user = await User.create(req.body);
       const token = signToken(user);
       res.json({ token, user });
-    } catch (err) {
+    } catch (err) {z
       console.log(err);
       res.status(500).json(err);
     }
