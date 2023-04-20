@@ -7,21 +7,12 @@ import {
   Col
 } from 'react-bootstrap';
 
-
-
 import { getMe, deleteBook } from '../utils/API';
 import Auth from '../utils/auth';
 import { removeBookId } from '../utils/localStorage';
-import { useQuery } from '@apollo/client';
-import { GET_USER_SAVED_BOOKS } from '../graphql/queries';
 
 const SavedBooks = () => {
-  const { loading, error, data } = useQuery(GET_USER_SAVED_BOOKS);
-
-  if (loading) return <h2>Loading...</h2>;
-  if (error) return <h2>Error: {error.message}</h2>;
-
-  const { savedBooks } = data.user;
+  const [userData, setUserData] = useState({});
 
   // use this to determine if `useEffect()` hook needs to run again
   const userDataLength = Object.keys(userData).length;
@@ -74,6 +65,7 @@ const SavedBooks = () => {
       console.error(err);
     }
   };
+
   // if data isn't here yet, say so
   if (!userDataLength) {
     return <h2>LOADING...</h2>;
